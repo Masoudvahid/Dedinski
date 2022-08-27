@@ -1,6 +1,6 @@
-//
-// This is solver for quadratic equations
-//
+/**
+ * @file This is solver for quadratic equations
+ */
 
 #include "solver.h"
 

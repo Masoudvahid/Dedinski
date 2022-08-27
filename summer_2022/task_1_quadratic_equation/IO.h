@@ -1,5 +1,5 @@
 /**
- * @brief Control input and output of quadratic equations
+ * @file Control input and output of quadratic equations
  */
 
 #ifndef EQUATIONS_IO_H

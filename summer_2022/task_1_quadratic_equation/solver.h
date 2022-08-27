@@ -38,5 +38,4 @@ RootsAmount SolveLinearEquations(const double b, const double c, double *x);
  */
 RootsAmount SolveEquation(const double a, const double b, const double c, double *x1, double *x2);
 
-
 #endif // EQUATIONS_SOLVER_H
