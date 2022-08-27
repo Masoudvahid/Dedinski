@@ -1,11 +1,11 @@
 #include "IO.h"
 
-void InputCoefficients(double *a, double *b, double *c) {
+void InputCoefficients(double *const a, double *const b, double *const c) {
     printf("Enter the coefficients a, b and c of your quadratic equation.\n");
     while (scanf("%lg%lg%lg", a, b, c) != 3) {
         printf("Invalid coefficients entered. Please enter valid numbers\n");
 
-        while (getchar() != '\n') { } // Input while correct format is entered
+        while (getchar() != '\n') {} // Input while correct format is entered
     }
     assert(a != nullptr);
     assert(b != nullptr);

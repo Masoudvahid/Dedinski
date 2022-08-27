@@ -15,7 +15,8 @@
  * @param[in] b The x coefficient
  * @param[in] c The constant
  */
-void InputCoefficients(double *a, double *b, double *c);
+void InputCoefficients(double *const a, double *const b, double *const c);
+
 /**
  * @brief Output number of roots of quadratic equation and roots
  * @param[out] x1 The first root
