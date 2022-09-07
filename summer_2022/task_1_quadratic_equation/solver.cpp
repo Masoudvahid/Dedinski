@@ -10,6 +10,8 @@ bool IsEqual(double first, double second) {
 }
 
 RootsAmount SolveLinearEquations(const double b, const double c, double *x) {
+    assert(x != nullptr);
+
     if (IsEqual(b, 0)) {
         if (IsEqual(c, 0)) {
             return INFINITY_ROOTS;
@@ -30,7 +32,7 @@ RootsAmount SolveEquation(const double a, const double b, const double c, double
     }
 
     // Calculate discriminant
-    double discriminant = pow(b, 2) - (4 * a * c);
+    double discriminant = (b * b) - (4 * a * c);
     double sqrt_discriminant = sqrt(discriminant);
 
     *x1 = (-b + sqrt_discriminant) / (2 * a);
@@ -39,7 +41,7 @@ RootsAmount SolveEquation(const double a, const double b, const double c, double
     // Define different possibilities for the roots
     if (discriminant > 0)
         return TWO_ROOTS;
-    if (discriminant == 0)
+    if (IsEqual(discriminant, 0))
         return ONE_ROOT;
 
     return IMAGINARY_ROOTS;
