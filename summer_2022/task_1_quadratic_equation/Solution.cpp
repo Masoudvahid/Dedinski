@@ -2,18 +2,20 @@
 #include "solver.h"
 #include "unit_test.h"
 
-#define Test_d // Comment this line to perform testing
+#define NDEBUG  //is for release (no asserts there)
+
 
 int main() {
-#ifdef Test_d
+#ifdef NDEBUG
     Test();
 #else
-    double a = 0;
-    double b = 0;
-    double c = 0;
 
-    double x1 = 0;
-    double x2 = 0;
+    double a = NAN;
+    double b = NAN;
+    double c = NAN;
+
+    double x1 = NAN;
+    double x2 = NAN;
 
     // Input variables
     InputCoefficients(&a, &b, &c);

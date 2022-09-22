@@ -4,12 +4,12 @@
 
 void Test() {
     FILE *test_cases_fp = fopen(
-            R"(..\summer_2022\task_1_quadratic_equation\test_cases.txt)", "r");
+            R"(..\test_cases.txt)", "r");
     FILE *test_cases_answers_fp = fopen(
-            R"(..\summer_2022\task_1_quadratic_equation\test_cases_answers.txt)", "r");
+            R"(..\test_cases_answers.txt)", "r");
 
-    Coefficients test_case;
-    Answers test_case_answers;
+    Coefficients test_case = {};
+    Answers test_case_answers = {};
     Roots roots;
     int ok_test = 0;
     int tests_amount = 0;
@@ -25,6 +25,7 @@ void Test() {
             tests_amount++;
         }
         fclose(test_cases_fp);
+
     } else {
         perror(R"(..\summer_2022\task_1_quadratic_equation\test_cases.txt)");
     }
@@ -38,7 +39,9 @@ bool TestResult(const RootsAmount roots_amount, const Roots roots, const Answers
         case ONE_ROOT: {
             bool correct_answer =
                     (roots_amount == test_case_answers.roots_amount && IsEqual(roots.x1, test_case_answers.x1));
-            assert(correct_answer);
+
+//            assert(correct_answer);
+
             if (!(correct_answer)) {
                 printf("FAILED:   number of roots = %s, x = %lg\n"
                        "EXPECTED: number of roots = %s, x = %lg\n",

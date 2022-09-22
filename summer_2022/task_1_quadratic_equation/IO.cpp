@@ -1,15 +1,18 @@
 #include "IO.h"
 
 void InputCoefficients(double *const a, double *const b, double *const c) {
+
+    assert(a != nullptr);
+    assert(b != nullptr);
+    assert(c != nullptr);
+
+
     printf("Enter the coefficients a, b and c of your quadratic equation.\n");
     while (scanf("%lg%lg%lg", a, b, c) != 3) {
         printf("Invalid coefficients entered. Please enter valid numbers\n");
 
         while (getchar() != '\n') {} // Input while correct format is entered
     }
-    assert(a != nullptr);
-    assert(b != nullptr);
-    assert(c != nullptr);
 }
 
 void OutputRoots(const double x1, const double x2, const RootsAmount number_of_roots) {

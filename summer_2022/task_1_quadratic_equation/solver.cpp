@@ -25,12 +25,7 @@ RootsAmount SolveLinearEquations(const double b, const double c, double *x) {
     return ONE_ROOT;
 }
 
-RootsAmount SolveEquation(const double a, const double b, const double c, double *x1, double *x2) {
-    // Check if all variables are qualified for the calculation
-    if (IsEqual(a, 0)) {
-        return SolveLinearEquations(b, c, x1);
-    }
-
+RootsAmount SolveQuadratic(const double a, const double b, const double c, double *x1, double *x2) {
     // Calculate discriminant
     double discriminant = (b * b) - (4 * a * c);
     double sqrt_discriminant = sqrt(discriminant);
@@ -45,4 +40,19 @@ RootsAmount SolveEquation(const double a, const double b, const double c, double
         return ONE_ROOT;
 
     return IMAGINARY_ROOTS;
+}
+
+RootsAmount SolveEquation(const double a, const double b, const double c, double *x1, double *x2) {
+    // Check if all variables are qualified for the calculation
+    if (IsEqual(a, 0)) {
+        return SolveLinearEquations(b, c, x1);
+    } else if (IsEqual(c, 0)) {
+        *x1 = 0;
+        SolveLinearEquations(a, b, x2);
+        return TWO_ROOTS;
+    } else {
+        return SolveQuadratic(a, b, c, x1, x2);
+    }
+
+
 }
