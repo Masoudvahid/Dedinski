@@ -10,8 +10,8 @@
 //! TODO: Implement strcat  // DONE
 //! TODO: Implement strncat // DONE
 //! TODO: Implement strdup  // DONE
-//! TODO: Implement fgets   // HELP
-//! TODO: Implement getline // HELP
+//! TODO: Implement fgets   // HELP !
+//! TODO: Implement getline // HELP !
 //! TODO: Implement puts    // DONE
 //! TODO: Implement strchr  // DONE
 //! TODO: Implement strlen  // DONE

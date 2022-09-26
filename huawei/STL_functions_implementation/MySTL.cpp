@@ -1,9 +1,11 @@
 #include "MySTL.h"
 
 char *StrCpy(char *dest, const char *src) {
+
     if (dest == nullptr) {
         return nullptr;
     }
+
     while (*src != '\0') {
         *dest++ = *src++;
     }
@@ -58,9 +60,11 @@ char *StrnCat(char *dest, const char *src, int n) {
 char *fGets(char *str, int n, FILE *stream) {
 
 
+    putc ();
 }
 
-
+//! TODO: calloc instead of malloc
+//! TODO: Check the case that malloc returns NULL
 char *StrDup(const char *src) {
     if (src == nullptr) {
         return nullptr;
@@ -83,6 +87,7 @@ int StrLen(const char *str) {
     return len;
 }
 
+//! TODO: change the signiture of the function
 char *StrChr(const char *str, const char *search) {
     if (str == nullptr && search == nullptr) {
         return nullptr;
