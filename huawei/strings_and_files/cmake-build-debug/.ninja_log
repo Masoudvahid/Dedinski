@@ -1,0 +1,5 @@
+# ninja log v5
+4	103	6858947838155718	CMakeFiles/Onegin.dir/IO.cpp.obj	79fd8b2cbbb11b1e
+1	104	6858947838155718	CMakeFiles/Onegin.dir/main.cpp.obj	3db3653fa16051bf
+6	109	6858947838155718	CMakeFiles/Onegin.dir/sort.cpp.obj	edfa1946a30e14c3
+109	197	6858947839093591	Onegin.exe	68e7e8cbb1cae044

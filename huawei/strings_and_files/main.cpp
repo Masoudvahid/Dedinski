@@ -1,5 +1,6 @@
 #include "IO.h"
 #include "sort.h"
+
 /// \b  me\bow mow
 void printBuffer(char *buffer, size_t file_size) {
     for (int i = 0; i < file_size; i++) {
@@ -13,16 +14,14 @@ void printPoem(text *poem, size_t lines_num) {
     }
 }
 
-int main(int argc, char **argv) {
+int main(int argc, const char **argv) {
     char *file_name = nullptr;
     if (argc > 1) {
-        file_name = argv[1];
-
-    } else {
-        file_name = "../poem.txt";
+        strcpy(file_name, argv[1]);
     }
 
- //   strcpy (file_name, "meow.txt");
+    strcpy(file_name, "../poem.txt");
+
 
     size_t file_size = GetFileSize(file_name);
 
